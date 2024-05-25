@@ -19,6 +19,7 @@ set termguicolors
 nnoremap ,nt :NERDTreeToggle<CR>
 nnoremap ,f :Files<CR>
 nnoremap ,h :%s/<C-R>"//g<Left><Left>
+nnoremap ,e :CocList extensions<CR>
 
 "========== vim-plug ==================
 
@@ -29,9 +30,11 @@ Plug 'itchyny/lightline.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'joeytwiddle/sexy_scroller.vim'
+Plug 'kshenoy/vim-signature'
 
 "Language plugins
 Plug 'sheerun/vim-polyglot'
+Plug 'mattn/emmet-vim'
 Plug 'chaimleib/vim-renpy'
 Plug 'jlcrochet/vim-cs'
 
@@ -45,7 +48,7 @@ Plug 'ghifarit53/tokyonight-vim'
 ""Maybe someday plugins
 "Plug 'manzeloth/live-server'
 "Plug 'ryanoasis/vim-devicons'
-"Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 call plug#end()
 
@@ -60,7 +63,7 @@ call plug#end()
 
 "## OceanicNext
 "if (has("termguicolors"))
-"  set termguicolors
+  "set termguicolors
 "endif
 ":colorscheme OceanicNext
 
@@ -74,5 +77,4 @@ colorscheme tokyonight
 
 ""coc.nvim
 "Use enter to confirm completion
-"inoremap <expr> <cr> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
-
+inoremap <expr> <cr> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
